@@ -1,0 +1,14 @@
+{
+  "entry": "index.html",
+  "files": [
+    "app.js",
+    "fonts/tajawal-arabic-400-normal.woff2",
+    "fonts/tajawal-arabic-700-normal.woff2",
+    "fonts/tajawal-arabic-800-normal.woff2",
+    "fonts/tajawal-latin-400-normal.woff2",
+    "fonts/tajawal-latin-700-normal.woff2",
+    "fonts/tajawal-latin-800-normal.woff2",
+    "index.html",
+    "style.css"
+  ]
+}

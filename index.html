@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Desktop Explorer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+
+  <!-- Start screen -->
+  <section id="start" class="screen card">
+    <h1>Desktop Explorer</h1>
+    <p class="lead">Use your mouse to open windows, make them big, make them small, and close them!</p>
+    <div class="legend">
+      <div><span class="btnshow">&#8212;</span><b>Minimize</b><small>hide it</small></div>
+      <div><span class="btnshow sq"></span><b>Maximize</b><small>make it big</small></div>
+      <div><span class="btnshow x">&#10005;</span><b>Close</b><small>close it</small></div>
+    </div>
+    <p class="lead small">Finish 8 missions to win 8 stars!</p>
+    <button id="startBtn" class="main-btn" type="button">Start</button>
+  </section>
+
+  <!-- Game -->
+  <section id="game" class="screen" hidden>
+    <div class="mission card">
+      <div class="mission-top">
+        <span id="missionNum">Mission 1 of 8</span>
+        <span id="stars" class="stars" aria-label="Stars"></span>
+      </div>
+      <p id="missionText" class="mission-text"></p>
+      <p id="feedback" class="feedback" dir="rtl" lang="ar" role="status" aria-live="polite"></p>
+    </div>
+
+    <div id="desktop" class="desktop">
+      <div class="icons" id="icons"></div>
+      <div id="win" class="window" hidden>
+        <div class="titlebar">
+          <span class="wtitle"><span id="wIcon" class="wicon"></span><span id="wName">Paint</span></span>
+          <span class="wbtns">
+            <button type="button" class="wbtn" data-act="min" aria-label="Minimize">&#8212;</button>
+            <button type="button" class="wbtn" data-act="max" aria-label="Maximize"><span class="sqicon"></span></button>
+            <button type="button" class="wbtn close" data-act="close" aria-label="Close">&#10005;</button>
+          </span>
+        </div>
+        <div id="wBody" class="wbody"></div>
+      </div>
+      <div class="taskbar">
+        <span class="startbtn" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span id="taskApps" class="taskapps"></span>
+        <span class="clock">10:30</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success -->
+  <section id="success" class="screen card" hidden>
+    <div class="big-stars">&#11088;&#11088;&#11088;</div>
+    <h1>You are a Window Master!</h1>
+    <p class="lead">You opened, made big, made small, hid and closed windows. Great job!</p>
+    <div id="finalStars" class="stars big"></div>
+    <button id="againBtn" class="main-btn" type="button">Play again</button>
+  </section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
